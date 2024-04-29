@@ -1,58 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//namespace Pessoa
+﻿//namespace Pessoa
 //{
 public class Pessoa
 {
-    public string Nome;
-    public string Sobrenome;
-    public int Idade;
-    public string Telefone;
-    public string Celular;
-    public string Email;
-    public Pessoa() // método construtor
+    public string nome;
+    public string endereco;
+    public string sexo;
+    public string telefone;
+    public float salario;
+    public DateOnly nascimento;
+
+    public Pessoa()
     {
 
     }
-    public string DefinirNome()
+    public void DefinirNome(string nome)
     {
-        Console.WriteLine("Informe o nome desejado:");
-        return Console.ReadLine();
+        this.nome = nome;
     }
-    public string DefinirSobrenome()
+    public void DefinirEndereco(string e)
     {
-        Console.WriteLine("Informe o Sobrenome:");
-        return Console.ReadLine();
+        this.endereco = e;
     }
-    public int DefinirIdade()
+    public void DefinirSexo(string s)
     {
-        Console.WriteLine("Informe a sua idade:");
-        return int.Parse(Console.ReadLine());
+        this.sexo = s;
     }
-    public void DefinirTelefone(string telefone)
+    public void DefinirTelefone(string t)
     {
-        this.Telefone = telefone;
+        this.telefone = t;
     }
-    public void DefinirCelular(string celular)
+    public void DefinirSalario(float s)
     {
-        this.Celular = celular;
+        this.salario = s;
     }
-    public void DefinirEmail(string email)
+    public void DefinirNascimento(DateOnly n)
     {
-        this.Email = email;
+        this.nascimento = n;
     }
-    public void MostrarDados()
+    public void ImprimirPessoa()
     {
-        Console.WriteLine($"Nome: {Nome}", this.Nome);
-        Console.Write($" {Sobrenome}", this.Sobrenome);
-        Console.WriteLine($"Idade: {this.Idade}");
-        Console.WriteLine($"Telefone: {this.Telefone}");
-        Console.WriteLine($"Celular: {this.Celular}");
-        Console.WriteLine($"Email: {this.Email}");
-        Console.WriteLine();
+        Console.WriteLine($"Nome da pessoa : {this.nome}");
+        Console.WriteLine($"Endereço da pessoa : {this.endereco}");
+        Console.WriteLine($"Sexo da pessoa : {this.sexo}");
+        Console.WriteLine($"Telefone da pessoa : {this.telefone}");
+        Console.WriteLine($"Salário da pessoa : {this.salario}");
+        Console.WriteLine($"Dt.Nascimento da pessoa : {this.nascimento}");
     }
 }
+
